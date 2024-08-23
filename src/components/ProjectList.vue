@@ -1,10 +1,11 @@
 <script>
-import SingleProject from './SingleProject.vue';
+import ProjectCard from './ProjectCard.vue';
+import SingleProject from './ProjectCard.vue';
 import axios from 'axios';
 
 export default {
     components: {
-        SingleProject,
+        ProjectCard,
     },
     data() {
         return {
@@ -34,7 +35,7 @@ export default {
 
 <template>
     <div class="project-container">
-        <SingleProject v-for="(project,index) in projects" :key="index" :image="project.image" :title="project.title" :author="project.author" :date="project.date" :preview="project.preview" :type="project.type"/>
+        <ProjectCard v-for="(project,index) in projects" :key="index" :image="project.image" :title="project.title" :author="project.author" :date="project.date" :preview="project.preview" :type="project.type"/>
     </div>
 </template>
 
