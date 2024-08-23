@@ -8,7 +8,7 @@ export default {
     props: {
         image: {
             type: String,
-            required: false
+            required: true
         },
         title: {
             type: String,
@@ -38,11 +38,12 @@ export default {
     <div class="project-card">
         <img :src="image" alt="project image" class="project-image" />
         <div class="project-content">
+            <span class="project-id"> {{ type.id}} </span>
             <h2 class="project-title">{{ title }}</h2>
             <p class="project-author">{{ author }}</p>
             <p class="project-date">{{ date }}</p>
             <p class="project-preview">{{ preview }}</p>
-            <span class="project-type">{{ type }}</span>
+            <span class="project-type">{{ type.name }}</span>
         </div>
     </div>
 </template>
